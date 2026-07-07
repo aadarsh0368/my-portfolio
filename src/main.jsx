@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import './styles.css';
 
+const assetPath = (fileName) => `${import.meta.env.BASE_URL}${fileName}`;
+
 const profile = {
   name: 'Aadarsh S Kumar',
   role: 'Software Engineer',
@@ -10,8 +12,8 @@ const profile = {
   dob: '30-01-2000',
   address: 'Kashmeeram, East Kallada, Kollam, Kerala',
   linkedin: 'https://www.linkedin.com/in/aadarsh-s-kumar/',
-  resume: '/AADARSH_S_KUMAR_Resume.pdf',
-  photo: '/aadarsh-photo.png',
+  resume: assetPath('AADARSH_S_KUMAR_Resume.pdf'),
+  photo: assetPath('aadarsh-photo.png'),
   summary:
     'Software Engineer with 5+ years of experience building scalable, enterprise-grade web applications using PHP, Laravel, Symfony, CodeIgniter, Pimcore, Vue.js, and React. Specialized in RESTful API design, relational database optimization, and robust backend architecture.',
   impact:
